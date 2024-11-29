@@ -87,18 +87,27 @@
             }
 
             function highlightNext() {
-                if (!isHovering) { // Only highlight if not hovering
+                if (!isHovering) {
                     removeAllHighlights();
+                    // Add highlight to current link
                     allLinks[currentIndex].classList.add('highlight');
-                    currentIndex = (currentIndex + 1) % allLinks.length;
+                    // Move to next link after delay
+                    setTimeout(() => {
+                        currentIndex = (currentIndex + 1) % allLinks.length;
+                        highlightNext();
+                    }, 2000); // 2 second delay between highlights
+                } else {
+                    // If hovering, check again after delay
+                    setTimeout(highlightNext, 500);
                 }
-                // Continue the interval regardless of hover state
-                setTimeout(highlightNext, 2000);
             }
 
             // Start the sequence
             highlightNext();
         }
+
+        // Get the links container
+        const linksContainer = document.getElementById('links');
 
         // Add hover listeners to the links container
         linksContainer.addEventListener('mouseenter', () => {
@@ -114,7 +123,7 @@
         });
 
         // Start the highlight sequence after all links have loaded
-        setTimeout(startHighlightSequence, links.length * 100 + 1000);
+        setTimeout(startHighlightSequence, 1000);
     </script>
 
 
