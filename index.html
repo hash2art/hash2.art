@@ -1,130 +1,739 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HaSh2aRt | Artist: JS generative art, AI and GIMP, hand drawn</title>
-    <link href="./index_files/tailwindcss.min.css" rel="stylesheet">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      hash2art | Artist: NFT, generative art, creative coding, AI and digital
+      art, hand drawn
+    </title>
+    <meta name="title" content="hash2art | Digital Artist & NFT Creator" />
+    <meta
+      name="description"
+      content="Digital artist & NFT Creator specializing in creative coding generative art, AI-assisted creations, and hand-drawn pieces. Explore unique NFT collections of digital art across multiple platforms and blockchains."
+    />
+    <meta
+      name="keywords"
+      content="hash2art, NFT art, generative art, creative coding, digital art, AI art, crypto art, blockchain art, digital artist, NFT creator, web3 art"
+    />
+    <meta name="author" content="hash2art" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Primary Meta Tags -->
+    <meta name="image" content="https://hash2art.com/path/to/image.jpg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hash2art.com/" />
+    <meta
+      property="og:title"
+      content="hash2art | Digital Artist & NFT Creator"
+    />
+    <meta
+      property="og:description"
+      content="Digital artist & NFT Creator specializing in creative coding generative art, AI-assisted creations, and hand-drawn pieces. Explore unique NFT collections of digital art across multiple platforms and blockchains."
+    />
+    <meta property="og:image" content="./preview1200x630.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hash2art.com/" />
+    <meta
+      property="twitter:title"
+      content="hash2art | Digital Artist & NFT Creator"
+    />
+    <meta
+      property="twitter:description"
+      content="Digital artist & NFT Creator specializing in creative coding generative art, AI-assisted creations, and hand-drawn pieces. Explore unique NFT collections of digital art across multiple platforms and blockchains."
+    />
+
+    <meta name="twitter:site" content="@hash2art" />
+    <meta property="twitter:image" content="./preview600x330.png" />
+    <meta name="twitter:creator" content="@hash2art" />
+
+    <meta name="twitter:image:alt" content="hash2.art website screenshot" />
+
+    <!-- Additional SEO -->
+    <meta name="language" content="English" />
+    <!-- Tells search engines to revisit this page after 4 days to check for updates -->
+    <meta name="revisit-after" content="4 days" />
+    <!-- Sets the color of the browser UI elements (like address bar) on mobile devices -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icon16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icon32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="./icon48x48.png"
+    />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+    <!-- Apple Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icon180x180.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./icon152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./icon144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./icon120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./icon114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./icon76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./icon72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./icon57x57.png"
+    />
+
+    <!-- Android/Chrome -->
+    <!-- Web App Manifest for PWA support -->
+    <link rel="manifest" href="./site.webmanifest" />
+    <!-- Theme color for browser UI elements -->
+    <meta name="theme-color" content="#000000" />
+    <!-- Safari pinned tab icon -->
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000" />
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#111111" />
+    <meta name="msapplication-TileImage" content="./mstile-144x144.png" />
+    <meta name="msapplication-config" content="./browserconfig.xml" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hash2art.com/" />
+
+    <link href="./index_files/tailwindcss.min.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap");
 
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background: linear-gradient(to bottom right, #111111, #1a1a1a);
-        }
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background: linear-gradient(to bottom right, #111111, #1a1a1a);
+      }
 
-        .link {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+      .link {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
-        .link.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      .link.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-        .link:hover {
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
+      .link:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
 
-        .link.highlight {
-            animation: highlight 3s infinite alternate;
-        }
+      .link.highlight {
+        animation: highlight 3s infinite alternate;
+      }
 
-        @keyframes highlight {
-            0% { 
-                background: rgba(255, 255, 255, 0.03);
-                border-color: rgba(255, 255, 255, 0.1);
-            }
-            50% { 
-                background: rgba(255, 255, 255, 0.1);
-                border-color: rgba(255, 255, 255, 0.3);
-            }
-            100% { 
-                background: rgba(255, 255, 255, 0.03);
-                border-color: rgba(255, 255, 255, 0.1);
-            }
+      @keyframes highlight {
+        0% {
+          background: rgba(255, 255, 255, 0.03);
+          border-color: rgba(255, 255, 255, 0.1);
         }
+        50% {
+          background: rgba(255, 255, 255, 0.1);
+          border-color: rgba(255, 255, 255, 0.3);
+        }
+        100% {
+          background: rgba(255, 255, 255, 0.03);
+          border-color: rgba(255, 255, 255, 0.1);
+        }
+      }
 
-        .header-gradient {
-            background: linear-gradient(90deg, #ffffff, #5900ff, #ffffff);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+      .header-gradient {
+        background: linear-gradient(90deg, #ffffff, #5900ff, #ffffff);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .social-link:hover {
+        box-shadow: 0 0 15px rgba(255, 238, 0, 0.835);
+        border-radius: 100%;
+        transition: box-shadow 0.42s ease;
+      }
     </style>
-</head>
-<body class="min-h-screen py-12 px-4 text-white">
+  </head>
+  <body class="min-h-screen py-12 px-4 text-white">
     <div class="max-w-5xl mx-auto">
-        <h1 class="text-5xl font-bold mb-6 header-gradient text-center">hash2art</h1>
-        <p class="text-xl mb-12 text-center text-gray-300">⬛️ ⚪️ 🟥 Artist: JS generative art, AI and GIMP, hand drawn 🟥 ⚪️ ⬛️</p>
-        
-        <div id="links" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-            <!-- Links will be inserted here -->
-        <a href="https://drip.haus/Hash2art/auction/d960aba3-78e5-4677-b1e8-89e73a1b642a" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/drip_auction.png" class="w-full h-full object-cover" alt="DRiP Auction"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">DRiP Auction</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://www.fxhash.xyz/generative/slug/desend" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/desend.png" class="w-full h-full object-cover" alt="Desend"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Desend</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://exchange.art/hash2art/nfts" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/exchange_art.png" class="w-full h-full object-cover" alt="Exchange Art"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Exchange Art</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://foundation.app/@hash2art" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/foundation.jpeg" class="w-full h-full object-cover" alt="Foundation"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Foundation</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://x.com/hash2art" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/twitter.png" class="w-full h-full object-cover" alt="Twitter"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Twitter</span><span class="transform transition-transform duration-300 ml-2 sm:hidden" style="transform: translateX(0px);">→</span></div></div></a><a href="https://warpcast.com/hash2art" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/warpcast.png" class="w-full h-full object-cover" alt="Warpcast"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Warpcast</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://foundation.app/mint/base/0xa016B42a0022FA1Ff74e682bdC81b717c16797D2" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/characters___foundation.png" class="w-full h-full object-cover" alt="Characters"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Characters</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://rodeo.club/@hash2art" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/rodeo.png" class="w-full h-full object-cover" alt="Rodeo"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Rodeo</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://highlight.xyz/user/@hash2art.eth/" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/highlight.png" class="w-full h-full object-cover" alt="Highlight"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Highlight</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://www.fxhash.xyz/generative/26898" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/lines___dots__minimal_.png" class="w-full h-full object-cover" alt="Lines &amp; Dots [minimal]"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Lines &amp; Dots [minimal]</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://www.fxhash.xyz/u/hash2art" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/fxhash.png" class="w-full h-full object-cover" alt="Fxhash"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Fxhash</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://magiceden.io/marketplace/meos" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/mono_echoes.png" class="w-full h-full object-cover" alt="Mono Echoes"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Mono Echoes</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://exchange.art/series/Geometric-Echoes/nfts" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/geometric_echoes.png" class="w-full h-full object-cover" alt="Geometric-Echoes"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Geometric-Echoes</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://prohibition.art/u/hash2art#created" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/prohibition.jpeg" class="w-full h-full object-cover" alt="Prohibition"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Prohibition</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://www.mallow.art/u/hash2art" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/mallow.jpeg" class="w-full h-full object-cover" alt="Mallow"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Mallow</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://thehug.xyz/artists/hash2art" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible highlight"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/hug.jpeg" class="w-full h-full object-cover" alt="HUG"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">HUG</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://objkt.com/@hash2art/collections" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/objkt.jpeg" class="w-full h-full object-cover" alt="Objkt"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">Objkt</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a><a href="https://newfrontier.art/collection/datbase/shop" target="_blank" class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"><div class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"><div class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"><img src="./index_files/dat_base.png" class="w-full h-full object-cover" alt="DAT BASE"></div><div class="flex items-center justify-center ml-3 sm:ml-0"><span class="text-sm sm:text-lg text-center flex-grow">DAT BASE</span><span class="transform transition-transform duration-300 ml-2 sm:hidden">→</span></div></div></a></div>
+      <h1 class="text-5xl font-bold mb-6 header-gradient text-center">
+        hash2art
+      </h1>
+      <p class="text-xl mb-12 text-center text-gray-300">
+        ⬛️ ⚪️ 🟥 Artist: JS generative art, AI and GIMP, hand drawn 🟥 ⚪️ ⬛️
+      </p>
+
+      <div class="flex justify-center gap-4 mb-8">
+        <a href="https://x.com/hash2art" target="_blank" class="social-link">
+          <img src="./index_files/twitter.png" alt="Twitter" class="w-12 h-12 rounded-full">
+        </a>
+        <a href="https://warpcast.com/hash2art" target="_blank" class="social-link">
+          <img src="./index_files/warpcast.png" alt="Warpcast" class="w-12 h-12 rounded-full">
+        </a>
+      </div>
+
+      <div
+        id="links"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3"
+      >
+        <!-- Links will be inserted here -->
+        <a
+          href="https://drip.haus/Hash2art/auction/d960aba3-78e5-4677-b1e8-89e73a1b642a"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/drip_auction.png"
+                class="w-full h-full object-cover"
+                alt="DRiP Auction"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >DRiP Auction</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://www.fxhash.xyz/generative/slug/desend"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/desend.png"
+                class="w-full h-full object-cover"
+                alt="Desend"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Desend</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://exchange.art/hash2art/nfts"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/exchange_art.png"
+                class="w-full h-full object-cover"
+                alt="Exchange Art"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Exchange Art</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://foundation.app/@hash2art"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/foundation.jpeg"
+                class="w-full h-full object-cover"
+                alt="Foundation"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Foundation</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://x.com/hash2art"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/twitter.png"
+                class="w-full h-full object-cover"
+                alt="Twitter"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Twitter</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                style="transform: translateX(0px)"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://warpcast.com/hash2art"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/warpcast.png"
+                class="w-full h-full object-cover"
+                alt="Warpcast"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Warpcast</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://foundation.app/mint/base/0xa016B42a0022FA1Ff74e682bdC81b717c16797D2"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/characters___foundation.png"
+                class="w-full h-full object-cover"
+                alt="Characters"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Characters</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://rodeo.club/@hash2art"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/rodeo.png"
+                class="w-full h-full object-cover"
+                alt="Rodeo"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow">Rodeo</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://highlight.xyz/user/@hash2art.eth/"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/highlight.png"
+                class="w-full h-full object-cover"
+                alt="Highlight"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Highlight</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://www.fxhash.xyz/generative/26898"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/lines___dots__minimal_.png"
+                class="w-full h-full object-cover"
+                alt="Lines &amp; Dots [minimal]"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Lines &amp; Dots [minimal]</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://www.fxhash.xyz/u/hash2art"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/fxhash.png"
+                class="w-full h-full object-cover"
+                alt="Fxhash"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Fxhash</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://magiceden.io/marketplace/meos"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/mono_echoes.png"
+                class="w-full h-full object-cover"
+                alt="Mono Echoes"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Mono Echoes</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://exchange.art/series/Geometric-Echoes/nfts"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/geometric_echoes.png"
+                class="w-full h-full object-cover"
+                alt="Geometric-Echoes"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Geometric-Echoes</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://prohibition.art/u/hash2art#created"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/prohibition.jpeg"
+                class="w-full h-full object-cover"
+                alt="Prohibition"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Prohibition</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://www.mallow.art/u/hash2art"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/mallow.jpeg"
+                class="w-full h-full object-cover"
+                alt="Mallow"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >Mallow</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://thehug.xyz/artists/hash2art"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/hug.jpeg"
+                class="w-full h-full object-cover"
+                alt="HUG"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow">HUG</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://objkt.com/@hash2art/collections"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/objkt.jpeg"
+                class="w-full h-full object-cover"
+                alt="Objkt"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow">Objkt</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        ><a
+          href="https://newfrontier.art/collection/datbase/shop"
+          target="_blank"
+          class="link p-2 sm:p-4 rounded-lg transition-all duration-300 visible"
+          ><div
+            class="flex flex-row sm:flex-col h-full items-center sm:items-stretch"
+          >
+            <div
+              class="w-8 h-8 sm:w-16 sm:h-16 sm:mx-auto mb-0 sm:mb-3 rounded-full overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./index_files/dat_base.png"
+                class="w-full h-full object-cover"
+                alt="DAT BASE"
+              />
+            </div>
+            <div class="flex items-center justify-center ml-3 sm:ml-0">
+              <span class="text-sm sm:text-lg text-center flex-grow"
+                >DAT BASE</span
+              ><span
+                class="transform transition-transform duration-300 ml-2 sm:hidden"
+                >→</span
+              >
+            </div>
+          </div></a
+        >
+      </div>
     </div>
 
     <script>
-        let highlightInterval; // Variable to store the interval
-        let isHovering = false; // Track hover state
-        // Modified highlight animation with pause on hover
-        function startHighlightSequence() {
-            const allLinks = document.querySelectorAll('.link');
-            let currentIndex = 0;
+      let highlightInterval; // Variable to store the interval
+      let isHovering = false; // Track hover state
+      // Modified highlight animation with pause on hover
+      function startHighlightSequence() {
+        const allLinks = document.querySelectorAll(".link");
+        let currentIndex = 0;
 
-            function removeAllHighlights() {
-                allLinks.forEach(link => link.classList.remove('highlight'));
-            }
-
-            function highlightNext() {
-                if (!isHovering) {
-                    removeAllHighlights();
-                    // Add highlight to current link
-                    allLinks[currentIndex].classList.add('highlight');
-                    // Move to next link after delay
-                    setTimeout(() => {
-                        currentIndex = (currentIndex + 1) % allLinks.length;
-                        highlightNext();
-                    }, 2000); // 2 second delay between highlights
-                } else {
-                    // If hovering, check again after delay
-                    setTimeout(highlightNext, 500);
-                }
-            }
-
-            // Start the sequence
-            highlightNext();
+        function removeAllHighlights() {
+          allLinks.forEach((link) => link.classList.remove("highlight"));
         }
 
-        // Get the links container
-        const linksContainer = document.getElementById('links');
+        function highlightNext() {
+          if (!isHovering) {
+            removeAllHighlights();
+            // Add highlight to current link
+            allLinks[currentIndex].classList.add("highlight");
+            // Move to next link after delay
+            setTimeout(() => {
+              currentIndex = (currentIndex + 1) % allLinks.length;
+              highlightNext();
+            }, 2000); // 2 second delay between highlights
+          } else {
+            // If hovering, check again after delay
+            setTimeout(highlightNext, 500);
+          }
+        }
 
-        // Add hover listeners to the links container
-        linksContainer.addEventListener('mouseenter', () => {
-            isHovering = true;
-            // Remove all highlights when hovering
-            document.querySelectorAll('.link').forEach(link => {
-                link.classList.remove('highlight');
-            });
+        // Start the sequence
+        highlightNext();
+      }
+
+      // Get the links container
+      const linksContainer = document.getElementById("links");
+
+      // Add hover listeners to the links container
+      linksContainer.addEventListener("mouseenter", () => {
+        isHovering = true;
+        // Remove all highlights when hovering
+        document.querySelectorAll(".link").forEach((link) => {
+          link.classList.remove("highlight");
         });
+      });
 
-        linksContainer.addEventListener('mouseleave', () => {
-            isHovering = false;
-        });
+      linksContainer.addEventListener("mouseleave", () => {
+        isHovering = false;
+      });
 
-        // Start the highlight sequence after all links have loaded
-        setTimeout(startHighlightSequence, 1000);
+      // Start the highlight sequence after all links have loaded
+      setTimeout(startHighlightSequence, 1000);
     </script>
-
-
-</body></html>
+  </body>
+</html>
